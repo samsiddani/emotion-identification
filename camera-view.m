@@ -1,7 +1,25 @@
-pic = imread('df1.jpg');
-imshow(pic)
-% pic2 = imread('df.jpg');
-% % imshow(pic2)
-[p1,e1] = classify(final,pic)
-% [p2,e2] = classify(final,pic2)
 
+camera = webcam; % Connect to the camera
+
+camera
+while true   
+    picture = camera.snapshot;              % Take a picture    
+    picture = imresize(picture,[224,224]);  % Resize the picture
+
+    [label,info] = classify(final, picture)       % Classify the picture
+    image(picture);
+    if label== 'angry'
+        title([char('neutral'),char('     '),num2str(info(1)*100), char(' %')])
+    end
+    if label == 'cry'
+        title([char(label),char('     '),num2str(info(2)*100), char(' %')])
+    end
+    if label == 'happy'
+        title([char(label),char('     '),num2str(info(3)*100), char(' %')])
+    end
+    if label == 'suprise'
+        title([char(label),char('     '),num2str(info(4)*100), char(' %')])
+    end
+
+    drawnow;   
+end
