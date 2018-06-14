@@ -13,5 +13,8 @@ firstly, you have to divide the images in to different and label as expression n
 I have trained the network with four folders.<br/>
 If you don't want to change the code, you have to create four folders with your desired expression.<br/>
 Next, run the resize.m for all this four folders.<br/>
-next, train your network by running training-neuralnetwork on this four folders.<br/>
-next, run to camera-view to identify your emotions.<br/>
+Next, train your network by running training-neuralnetwork on this four folders.<br/>
+Next, run to camera-view to identify your emotions.<br/>
+
+
+If you have any doubts, mail me @ sam61777@gmail.com
